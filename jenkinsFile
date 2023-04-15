@@ -15,7 +15,7 @@ pipeline {
         }
         stage('deploy') {
             steps { 
-            bat 'npm run ng s-o' 
+            bat 'serve -s build' 
             echo "Deploying..."
          }
         }
