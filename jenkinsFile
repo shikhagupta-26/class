@@ -12,6 +12,11 @@ pipeline {
             bat 'npm run ng -- build' 
             echo "Building..."
             }
+        stage('deploy') {
+        steps { 
+        bat 'npm run ng s-o' 
+        echo "Deploying..."
+        }
         }
        
     }
